@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login with Facebook Project</title>
+    <link rel='stylesheet' href='/stylesheets/bootstrap.min.css' />
+    <link rel='stylesheet' href='/stylesheets/fa/css/font-awesome.min.css' />
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="/">Facebook Login Project</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="/">Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item" id="login">
+              <a class="nav-link" href="/facebook-login">Login</a>
+            </li>
+            <li class="nav-item d-none" id="logout">
+              <a class="nav-link" href="/facebook-login" onclick="logout()">Logout</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container h-100">
+      <div class="row h-100">
+        <div class="col-lg-12 text-center h-100">
+          <div class="center w-100">
+            <h1 id="heading" class="display-4 text-uppercase">Please Login to view your accout info</h1>
+
+            <fb:login-button id="fb-btn"
+              scope="public_profile,email,user_birthday,user_location"
+              onlogin="checkLoginState();">
+            </fb:login-button>
+
+            <div id="profile-info" class="p-3 rounded mx-auto mt-4 shadow d-none"></div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="/javascripts/jquery-3.2.1.min.js"></script>
+    <script src="/javascripts/popper.js"></script>
+    <script src="/javascripts/bootstrap.min.js"></script>
+    <script src="/javascripts/main.js"></script>
+  </body>
+</html>
