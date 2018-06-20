@@ -1,7 +1,8 @@
 
+
   window.fbAsyncInit = function() {
     FB.init({
-      appId      : '128580174511565',
+      appId      : 'process.env.APP_ID',
       cookie     : true,
       xfbml      : true,
       version    : 'v2.10'
@@ -84,3 +85,8 @@ function showHideElement(isLoggedIn){
 
   }
 }
+
+  // jQuery
+  fetch('../../key/keys_prod.json').then(function(data) {
+      console.log(data);
+  });
